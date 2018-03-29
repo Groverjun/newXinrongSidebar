@@ -59,14 +59,16 @@
 								<span>暂无在线客服</span><br />
 								
 							</p>
-							<p><a href="javascript:void(0)" class="freePhoneBoxReturn"><返回</a></p>
+							<p><a href="javascript:void(0)" class="freePhoneBoxReturn">&lt;返回</a></p>
 						</div>
+						
 					</div>
 				</div>
 			</li>
 		</ul>
 		
 		<!--留言板-->
+		
 		<div class="newXinrongMessage">
 			<div class="newXinrongMessage_top">
 				<a href="javascript:void(0)" class="del_newXinrongMessage"><img src="img/del.png" /></a>
@@ -90,60 +92,131 @@
 			</ul>
 			<button>提交</button>
 		</div>
+		
+		<!--中间弹出框-->
+		<div class="newXinrongCenter">
+			<h1><a href="javascrip:void(0)" class="newXinrongCenterDel"><img src="img/center_del.png"/></a></h1>
+			<div class="newXinrongCenter_txt">
+				<h1>最新报价</h1>
+				<h2><span>3月23日</span>优惠报价单</h2>
+			</div>
+			<div class="newXinrongCenter_txt_bottom">
+				<div href="javascript:void(0)" class="newXinrongCenter_txt_bottomLeft">
+					<a href="javascript:void(0)">
+						<img src="img/center_Consultation.png"/>
+						点击报价
+					</a>
+				</div>
+				<div class="newXinrongCenter_txt_bottomRight">
+					<a href="javascript:void(0)">
+						<img src="img/center_tel.png"/>
+						点击报价
+					</a>
+					<div class="newXinrongCenter_tel">
+						<div class="newXinrongCenter_telBox">
+							<i></i>
+							<div class="newXinrongCenter_telBoxT">
+								<!--呼叫前-->
+								<div class="newXinrongCenterInput">
+									<input type="text" placeholder="输入您的电话"/>
+									<button>点击免费通话</button>
+									<p>请输入<span>您的电话号码</span>企业将自动回拨给您</p>
+									<p>输入格式：手机 158******60 固话0105****8</p>
+								</div>
+								<!--呼叫中-->
+								<div class="newXinrongCenterConduct">
+									<p>正在呼叫</p>
+									<p><span>您将接收到 01053932409 回拨电话</span></p>
+									<p>请稍后...</p>
+								</div>
+								<!--出错啦-->
+								<div class="newXinrongCenterError">
+									<p>出错啦</p>
+									<p><span>暂无在线客服</span></p>
+									<p><a href="javascript:void(0)" class="newXinrongCenterReturn">&lt;返回</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/drag.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			//拖拽
-			$('.newXinrongMessage').each(function(index){
+		<script type="text/javascript">//拖拽
+			$('.newXinrongMessage').each(function(index) {
 				$(this).myDrag({
-					parent:'.test',
-					randomPosition:false,
-					direction:'all'
+					parent: '.test',
+					randomPosition: false,
+					direction: 'all'
 				});
 			});
-			//呼叫前
-//			$(".freePhoneHover").css("height","270px");
-//			$(".freePhoneBoxInput").show().siblings("div").hide();
-
-			//呼叫中
-//			$(".freePhoneHover").css("height","157px");
-//			$(".freePhoneBoxConduct").show().siblings("div").hide();
-
-			//错误
+			//侧边呼叫前
+			$(".freePhoneHover").css("height","270px");
+			$(".freePhoneBoxInput").show().siblings("div").hide();
+			
+			//侧边呼叫中
 			$(".freePhoneHover").css("height","157px");
+			$(".freePhoneBoxConduct").show().siblings("div").hide();
+			
+			//侧边呼叫错误
+			$(".freePhoneHover").css("height", "157px");
 			$(".freePhoneBoxError").show().siblings("div").hide();
 			
 			
+			//中间呼叫前
+			$(".newXinrongCenterInput").show().siblings("div").hide();
+			
+			//中间呼叫中
+			$(".newXinrongCenterConduct").show().siblings("div").hide();
+			
+			//中间呼叫错误
+			$(".newXinrongCenterError").show().siblings("div").hide();
+			
 			//判断左右位置
-			window.onload=function(){
-				if($(".newXinrongSidebar").css("left")=="10px"){
-					$(".freePhoneHover").css("left","70px");
-					$(".newXinrongMessage").css("left","90px");
+			window.onload = function() {
+				if($(".newXinrongSidebar").css("left") == "10px") {
+					$(".freePhoneHover").css("left", "70px");
+					$(".newXinrongMessage").css("left", "90px");
 					$(".freePhoneBox_left").show();
-				}else if($(".newXinrongSidebar").css("right")=="10px"){
-					$(".freePhoneHover").css("right","70px");
-					$(".newXinrongMessage").css("right","90px");
+				} else if($(".newXinrongSidebar").css("right") == "10px") {
+					$(".freePhoneHover").css("right", "70px");
+					$(".newXinrongMessage").css("right", "90px");
 					$(".freePhoneBox_right").show();
 				}
 			}
 			//打开留言框
-			$(".click_newXinrongMessage").click(function(){
-				if($(".newXinrongSidebar").css("left")=="10px"){
-					$(".newXinrongMessage").css("left","90px");
-				}else if($(".newXinrongSidebar").css("right")=="10px"){
-					$(".newXinrongMessage").css("right","90px");
+			$(".click_newXinrongMessage").click(function() {
+				if($(".newXinrongSidebar").css("left") == "10px") {
+					$(".newXinrongMessage").css("left", "90px");
+				} else if($(".newXinrongSidebar").css("right") == "10px") {
+					$(".newXinrongMessage").css("right", "90px");
 				}
-				$(".newXinrongMessage").animate({bottom:"0px"},200);
+				$(".newXinrongMessage").animate({
+					bottom: "0px"
+				}, 200);
 			})
 			//关闭留言框
-			$(".del_newXinrongMessage").click(function(){
+			$(".del_newXinrongMessage").click(function() {
 				$(".newXinrongMessage").removeAttr("style");
-				$(".newXinrongMessage").animate({bottom:"-600px"},200);
+				$(".newXinrongMessage").animate({
+					bottom: "-600px"
+				}, 200);
 			})
-			//返回
-			$(".freePhoneBoxReturn").click(function(){
-				$(".freePhoneHover").css("height","270px");
+			//侧边呼叫返回
+			$(".freePhoneBoxReturn").click(function() {
+				$(".freePhoneHover").css("height", "270px");
 				$(".freePhoneBoxInput").show().siblings("div").hide();
+			})
+			//中间呼叫返回
+			$(".newXinrongCenterReturn").click(function(){
+				$(".newXinrongCenterInput").show().siblings("div").hide();
+			})
+			
+			//关闭中间弹出框
+			$(".newXinrongCenterDel").click(function(){
+				$(".newXinrongCenter").hide();
 			})
 		</script>
 	</body>

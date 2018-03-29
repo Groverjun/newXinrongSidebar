@@ -264,3 +264,178 @@
     background: #3499E9;
     border: none;
 }
+
+//中间弹出框
+.newXinrongCenter{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 370px;
+    height: 240px;
+    background-image: url(../img/center.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    box-shadow: 0 0 30px 2px #CCCCCC;
+}
+.newXinrongCenter *{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+.newXinrongCenter>h1{
+    text-align: right;
+    padding: 10px;
+}
+.newXinrongCenter>.newXinrongCenter_txt{
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 34px;
+}
+.newXinrongCenter>.newXinrongCenter_txt>h1{
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+}
+.newXinrongCenter>.newXinrongCenter_txt>h2{
+     font-size: 18px;
+     color: #ffffff;
+    font-weight: normal;
+}
+.newXinrongCenter>.newXinrongCenter_txt>h2>span{
+    font-size: 18px;
+     color: #ffffff;
+    font-weight: normal;
+}
+.newXinrongCenter_txt_bottom{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.newXinrongCenter_txt_bottom>div{
+    position: relative;
+    width: 50%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.newXinrongCenter_txt_bottom>div>a{
+     height: 60px;
+     line-height: 60px;
+     font-size: 16px;
+     color: #333333;
+     display: block;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.newXinrongCenter_tel{
+    position: absolute;
+    width: 370px;
+    height: 160px;
+    bottom: -160px;
+    left: -186px;
+    border: none;
+    box-shadow: 0 6px 30px 2px #CCCCCC;
+    animation: i .3s ease-in-out forwards;
+    padding: 10px 0;
+    display: none;
+}
+.newXinrongCenter_telBox{
+    position: relative;
+    height: 100%;
+    background: #fff;
+}
+.newXinrongCenter_telBox>i{
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    border: 10px solid transparent;
+    border-bottom-color: #fff;
+    right: 100px;
+    top: -20px;
+}
+.newXinrongCenter_telBoxT{
+    height: 100%;
+    padding: 30px 30px 0;
+}
+//呼叫前
+.newXinrongCenterInput{
+    text-align: left;
+    display: none;
+}
+.newXinrongCenterInput input{
+    border: 1px solid #4a8bfd;
+    width: 170px;
+    height: 40px;
+    margin: auto;
+    text-align: center;
+    color: #666666;
+    font-size: 14px;
+    border-radius: 3px ;
+    margin-bottom: 10px;
+}
+.newXinrongCenterInput button{
+    width: 130px;
+    height: 40px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px ;
+    background:#4a8bfd ;
+    border: none;
+    margin-bottom: 20px;
+    cursor: pointer;    
+}
+.newXinrongCenterInput p{
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+.newXinrongCenterInput p span{
+    color: #4A8BFD;font-size: 14px;
+}
+//呼叫中
+.newXinrongCenterConduct{
+    padding-top: 20px;
+    display: none;
+}
+.newXinrongCenterConduct p{
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.newXinrongCenterError{
+    display: none;
+}
+.newXinrongCenterError p,a{
+    text-align: center;
+    color: #666;
+    font-size: 14px; 
+    margin-bottom: 5px;
+}
+.newXinrongCenterError  span{
+    color: #4A8BFD;font-size: 14px;
+}
+.newXinrongCenterConduct p span{
+    color: #4A8BFD;font-size: 14px;
+}
+.newXinrongCenter_txt_bottomRight:hover .newXinrongCenter_tel{
+    display: block;
+}
+.newXinrongCenter_txt_bottom>div:last-child{
+    border-left: 1px solid #ccc;
+}
+.newXinrongCenter_txt_bottom div img{
+    margin-right: 10px;
+}
