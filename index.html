@@ -53,6 +53,14 @@
 							<p>请稍后...</p>
 						</div>
 						<!--失败-->
+						<div class="freePhoneBoxError">
+							<p>出错啦</p>
+							<p>
+								<span>暂无在线客服</span><br />
+								
+							</p>
+							<p><a href="javascript:void(0)"><返回</a></p>
+						</div>
 					</div>
 				</div>
 			</li>
@@ -94,14 +102,14 @@
 				});
 			});
 			//呼叫前
-			$(".freePhoneHover").css("height","270px")
-			$(".freePhoneBoxInput").show()
-			$(".freePhoneBoxConduct").hide()
+//			$(".freePhoneHover").css("height","270px")
+//			$(".freePhoneBoxInput").show().siblings("div").hide()
 			//呼叫中
 //			$(".freePhoneHover").css("height","157px")
-//			$(".freePhoneBoxInput").hide()
-//			$(".freePhoneBoxConduct").show()
-
+//			$(".freePhoneBoxConduct").show().siblings("div").hide()
+			//错误
+			$(".freePhoneHover").css("height","157px")
+			$(".freePhoneBoxError").show().siblings("div").hide()
 			//判断左右
 			window.onload=function(){
 				if($(".newXinrongSidebar").css("left")=="10px"){
