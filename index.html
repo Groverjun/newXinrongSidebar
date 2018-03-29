@@ -59,7 +59,7 @@
 								<span>暂无在线客服</span><br />
 								
 							</p>
-							<p><a href="javascript:void(0)"><返回</a></p>
+							<p><a href="javascript:void(0)" class="freePhoneBoxReturn"><返回</a></p>
 						</div>
 					</div>
 				</div>
@@ -102,39 +102,49 @@
 				});
 			});
 			//呼叫前
-//			$(".freePhoneHover").css("height","270px")
-//			$(".freePhoneBoxInput").show().siblings("div").hide()
+//			$(".freePhoneHover").css("height","270px");
+//			$(".freePhoneBoxInput").show().siblings("div").hide();
+
 			//呼叫中
-//			$(".freePhoneHover").css("height","157px")
-//			$(".freePhoneBoxConduct").show().siblings("div").hide()
+//			$(".freePhoneHover").css("height","157px");
+//			$(".freePhoneBoxConduct").show().siblings("div").hide();
+
 			//错误
-			$(".freePhoneHover").css("height","157px")
-			$(".freePhoneBoxError").show().siblings("div").hide()
-			//判断左右
+			$(".freePhoneHover").css("height","157px");
+			$(".freePhoneBoxError").show().siblings("div").hide();
+			
+			
+			//判断左右位置
 			window.onload=function(){
 				if($(".newXinrongSidebar").css("left")=="10px"){
-					$(".freePhoneHover").css("left","70px")
-					$(".newXinrongMessage").css("left","90px")
-					$(".freePhoneBox_left").show()
+					$(".freePhoneHover").css("left","70px");
+					$(".newXinrongMessage").css("left","90px");
+					$(".freePhoneBox_left").show();
 				}else if($(".newXinrongSidebar").css("right")=="10px"){
-					$(".freePhoneHover").css("right","70px")
-					$(".newXinrongMessage").css("right","90px")
-					$(".freePhoneBox_right").show()
+					$(".freePhoneHover").css("right","70px");
+					$(".newXinrongMessage").css("right","90px");
+					$(".freePhoneBox_right").show();
 				}
 			}
+			//打开留言框
 			$(".click_newXinrongMessage").click(function(){
 				if($(".newXinrongSidebar").css("left")=="10px"){
-					$(".newXinrongMessage").css("left","90px")
+					$(".newXinrongMessage").css("left","90px");
 				}else if($(".newXinrongSidebar").css("right")=="10px"){
-					$(".newXinrongMessage").css("right","90px")
+					$(".newXinrongMessage").css("right","90px");
 				}
-				$(".newXinrongMessage").animate({bottom:"0px"},200)
+				$(".newXinrongMessage").animate({bottom:"0px"},200);
 			})
+			//关闭留言框
 			$(".del_newXinrongMessage").click(function(){
-				$(".newXinrongMessage").removeAttr("style")
-				$(".newXinrongMessage").animate({bottom:"-600px"},200)
+				$(".newXinrongMessage").removeAttr("style");
+				$(".newXinrongMessage").animate({bottom:"-600px"},200);
 			})
-
+			//返回
+			$(".freePhoneBoxReturn").click(function(){
+				$(".freePhoneHover").css("height","270px");
+				$(".freePhoneBoxInput").show().siblings("div").hide();
+			})
 		</script>
 	</body>
 </html>
