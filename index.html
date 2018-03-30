@@ -175,7 +175,7 @@
 			$(".newXinrongCenterError").show().siblings("div").hide();
 			
 			//判断左右位置
-			window.onload = function() {
+			$(function(){
 				if($(".newXinrongSidebar").css("left") == "10px") {
 					$(".freePhoneHover").css("left", "70px");
 					$(".newXinrongMessage").css("left", "90px");
@@ -185,7 +185,8 @@
 					$(".newXinrongMessage").css("right", "90px");
 					$(".freePhoneBox_right").show();
 				}
-			}
+			})
+				
 			//打开留言框
 			$(".click_newXinrongMessage").click(function() {
 				if($(".newXinrongSidebar").css("left") == "10px") {
@@ -219,5 +220,7 @@
 				$(".newXinrongCenter").hide();
 			})
 		</script>
+		<!--<script type='text/javascript'> var xr_clientId = 25745; var syb_codeId = 8433; var xr_goUrl = 'http://d.jzl123.cn'; var qimoClientId = {nickName:'clientId:' + xr_clientId}; (function() { var kfm = document.createElement('script'); kfm.id = 'xr_kf_script'; kfm.setAttribute('charset', 'UTF-8'); kfm.src = xr_goUrl + '/public/js/xrkf.js?rnd=' + Math.random();  var kfs = document.getElementsByTagName('script')[0];   kfs.parentNode.insertBefore(kfm, kfs);})();</script><script>(function() {var urlTj = 'http://tj.wayboo.net.cn/TongJiCenter/js/tj.js';var script = document.getElementsByTagName('script');var ifHave = false; for (var i = 0; i < script.length; i++) {if(script[i].src.match(urlTj)){ifHave = true;break;}}if(!ifHave){var hm = document.createElement('script');hm.id = 'xr_tj_script'; hm.setAttribute('charset', 'UTF-8');hm.setAttribute('data_ci', 25745); hm.setAttribute('data_pt', 2); hm.src = urlTj + '?rnd=' + Math.random();var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm, s);}})();</script></div>
+  -->
 	</body>
 </html>
